@@ -1,0 +1,16 @@
+# Use a lightweight Python base image
+FROM public.ecr.aws/docker/library/python:3.13
+
+RUN apt-get update && apt-get install -y git
+
+# Set work directory inside container
+WORKDIR /app
+
+# Copy all files from the host directory to the container
+COPY . .
+
+# Install dependencies (update this if you use requirements.txt or pyproject.toml)
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Default command to keep container running
+CMD ["tail", "-f", "/dev/null"]
