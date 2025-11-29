@@ -154,8 +154,4 @@ python main.py
 
 This project is part of Hack This Fall 2025 - Milestone Edition.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
